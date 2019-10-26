@@ -10,6 +10,12 @@ public class Student {
     private String gender;
     List<String> activities = new ArrayList<>();
 
+    public Student() {
+        
+    }
+    public Student(String name) {
+        this.name = name;
+    }
     public Student(String name, int gradeLevel, double gpa, String gender, List<String> activities) {
         this.name = name;
         this.gradeLevel = gradeLevel;
@@ -59,7 +65,9 @@ public class Student {
     public void setActivities(List<String> activities) {
         this.activities = activities;
     }
-
+    public void printListOfActivities() {
+        System.out.println(activities);
+    }
     @Override
     public String toString() {
         return "Student{" +
